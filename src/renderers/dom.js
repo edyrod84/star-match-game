@@ -1,11 +1,11 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 
-import { App } from 'components/App';
+import App from 'components/App';
 
 import '../styles/index.css';
 
-ReactDOM.hydrate(
-  <App initialData={window.__R_DATA.initialData} />,
+ReactDOM.hydrateRoot(
   document.getElementById('root'),
+  <App/>,
 );
